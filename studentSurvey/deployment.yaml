@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: studentsurvey-deployment
+  labels:
+    app: studentsurvey
+spec:
+  replicas: 2            # Adjust the number of replicas as needed (even 1 is fine for testing)
+  selector:
+    matchLabels:
+      app: studentsurvey
+  template:
+    metadata:
+      labels:
+        app: studentsurvey
+    spec:
+      containers:
+      - name: studentsurvey
+        image: yukta1327/studentsurvey:latest  # Replace with your Docker image name (lowercase)
+        ports:
+        - containerPort: 8080                 # This should match the port your Spring Boot app listens on
