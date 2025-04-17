@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     // Jenkins credential IDs & image name
-    DOCKERHUB_CREDENTIALS   = 'dockerhub-creds'
+    DOCKERHUB_CREDENTIALS   = '7ba68df7-f8e7-4c24-bf72-416e5ea5849b'
     IMAGE_NAME              = 'yukta1327/studentsurvey'
     KUBE_CONFIG_CREDENTIALS = 'kubeconfig'
     K8S_NAMESPACE           = 'default'
