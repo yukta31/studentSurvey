@@ -25,10 +25,6 @@ public class SurveyController {
 @GetMapping
 public ResponseEntity<?> getAllSurveys() {
     List<Survey> surveys = surveyRepository.findAll();
-    if (surveys.isEmpty()) {
-        return ResponseEntity.ok("No survey data available right now. [Updated v2]");
-    }
-    return ResponseEntity.ok(surveys);
 }
 
     // Retrieve survey by id
