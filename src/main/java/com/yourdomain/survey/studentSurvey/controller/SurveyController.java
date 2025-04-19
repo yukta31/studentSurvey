@@ -22,10 +22,10 @@ public class SurveyController {
     }
 
     // Retrieve all surveys
-@GetMapping
-public ResponseEntity<?> getAllSurveys() {
-    List<Survey> surveys = surveyRepository.findAll();
-}
+    @GetMapping
+    public List<Survey> getAllSurveys() {
+        return surveyRepository.findAll();
+    }
 
     // Retrieve survey by id
     @GetMapping("/{id}")
